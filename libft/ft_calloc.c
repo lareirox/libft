@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/02 10:50:24 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/05/02 10:50:33 by nugoncal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
  * A função calloc serve para:
     Alocar memória suficiente para armazenar count elementos, cada um com size bytes.
