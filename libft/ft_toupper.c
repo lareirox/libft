@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
@@ -18,7 +20,6 @@ int	ft_toupper(int c)
 		return (c);
 }
 
-#include <stdio.h>
 /*
 // Aqui deves colocar a tua função ft_toupper
 int	ft_toupper(int c)
@@ -28,7 +29,7 @@ int	ft_toupper(int c)
     else
         return (c);
 }
-*/
+
 int main(void)
 {
     // Testes com letras minúsculas
@@ -49,4 +50,4 @@ int main(void)
 
     return (0);
 }
-
+*/

@@ -6,9 +6,11 @@
 /*   By: nugoncal <nugoncal@student.42Porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 15:15:24 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/04/10 16:44:53 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/02 14:20:12 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, unsigned int n)
 {
@@ -25,6 +27,7 @@ void	*ft_memset(void *s, int c, unsigned int n)
 	return s;
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 int	main()
@@ -72,12 +75,12 @@ void test_ft_memset(void)
         printf("\n");
     }
 
-/*    // 4. Memory Pointer is NULL (s = NULL)
+    // 4. Memory Pointer is NULL (s = NULL)
     {
         ft_memset(NULL, 'X', 5);  // This is technically undefined behavior, but it's worth testing
         printf("Null Pointer Test: No crash\n");
     }
-*/
+
     // 5. Filling with Zero (c = 0)
     {
         char buffer[10];
@@ -91,9 +94,4 @@ void test_ft_memset(void)
     }
 }
 
-int main()
-{
-    test_ft_memset();
-    return 0;
-}
-
+*/

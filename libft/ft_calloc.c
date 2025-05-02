@@ -6,35 +6,25 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 10:50:24 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/02 10:50:33 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/02 17:21:08 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * A função calloc serve para:
-    Alocar memória suficiente para armazenar count elementos, cada um com size bytes.
-    Inicializar toda essa memória com zeros.
-Ou seja, faz duas coisas importantes:
-    Calcula quanto de memória precisa (count * size)
-    Usa malloc para alocar essa memória
-    Usa algo como memset (ou um loop) para preencher a memória com zeros
-*/
+#include "libft.h"
 
-#include <stddef.h> // ate adicioanr a minha libft.h pelo makefile
-#include <stdlib.h>
 void	*ft_calloc(unsigned int count, unsigned int size)
 {
-	void	*space;
-	unsigned int	total_size;
-	int	i;
-	unsigned char	*ptr;
+	void		*space;
+	unsigned int		total_size;
+	int			i;
+	unsigned char		*ptr;
 
 	total_size = count * size;
 	space = malloc(total_size);
 	if (space == NULL)
 		return (NULL);
-	i= 0;
-	ptr = (unsigned char*)space;	
+	i = 0;
+	ptr = (unsigned char *)space;
 	while (i < total_size)
 	{
 		ptr[i] = 0;
@@ -51,4 +41,17 @@ void	*ft_calloc(unsigned int count, unsigned int size)
 **		block(size_t size). Memory allocated by calloc is initialized
 **		to zero. calloc return NULL when sufficient memory is not
 **		available in the heap.
+*/
+/*
+ * A função calloc serve para:
+Alocar memória suficiente para armazenar count elementos, cada um com size bytes.
+Inicializar toda essa memória com zeros.
+Ou seja, faz duas coisas importantes:
+    Calcula quanto de memória precisa (count * size)
+    Usa malloc para alocar essa memória
+    Usa algo como memset (ou um loop) para preencher a memória com zeros
+
+#include <stddef.h> // ate adicioanr a minha libft.h pelo makefile
+#include <stdlib.h>
+
 */

@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/02 16:56:38 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/05/02 16:57:07 by nugoncal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
@@ -13,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -28,8 +42,6 @@ int main(void)
     return (0);
 }
 
-
-/*
 strrchr procura a última ocorrência de um caractere numa string — e não a primeira como strchr.
 Faz-se (char *) para "transformar" o tipo const char * em char *.
 O cast é necessário para não dar warning de conversão de tipo.

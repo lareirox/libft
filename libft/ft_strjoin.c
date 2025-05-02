@@ -1,13 +1,24 @@
-// #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/02 16:59:00 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/05/02 17:15:58 by nugoncal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dest;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
-	if  (!s1 || !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	dest = (char *) malloc ((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!dest)
@@ -27,14 +38,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dest[i + j] = '\0';
 	return (dest);
 }
-
-
-
-
 /*
  * ft_strjoin
 char *ft_strjoin(char const *s1, char const *s2);
--
 s1: The prefix string.
 s2: The suffix string.
 The new string.
@@ -51,7 +57,6 @@ Temos de:
     Concatenar s2 logo a seguir
     Terminar com \0
     Retornar o novo ponteiro
-*/
 
 #include <stdio.h>
 
@@ -77,4 +82,4 @@ int main(void)
 
     return (0);
 }
-
+*/

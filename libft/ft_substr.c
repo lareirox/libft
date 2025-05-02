@@ -10,20 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  DESCRIPTION:
-**    Allocates (with malloc(3)) and returns a “fresh” substring
-**    from the string given as argument.
-** 	 - The substring begins at index "start" and is of size len. 
-**	 - If start and len aren’t refering to a valid substring, the behavior is undefined. 
-**	 - If the allocation fails, the function returns NULL.
-**    Param. #1 The string from which create the substring.
-**    Param. #2 The start index of the substring.
-**    Param. #3 The size of the substring.
-**    Return value: The substring.
-*/
-
-// #include <libft.h>
-#include <stddef.h>
+#include <libft.h>
 
 char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 {
@@ -44,3 +31,15 @@ char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 	substr[len] = '\0';
 	return (substr);
 }
+
+/*  DESCRIPTION:
+**    Allocates (with malloc(3)) and returns a “fresh” substring
+**    from the string given as argument.
+** 	 - The substring begins at index "start" and is of size len. 
+**	 - If start and len aren’t refering to a valid substring, the behavior is undefined. 
+**	 - If the allocation fails, the function returns NULL.
+**    Param. #1 The string from which create the substring.
+**    Param. #2 The start index of the substring.
+**    Param. #3 The size of the substring.
+**    Return value: The substring.
+*/
