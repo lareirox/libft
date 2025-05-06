@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pointer.c                                          :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/12 09:31:22 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/04/12 09:32:32 by nugoncal         ###   ########.fr       */
+/*   Created: 2025/05/06 17:23:30 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/05/06 17:51:57 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int main() {
-    char letter = 'A';
-    char *ptr = &letter;
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
 
-    printf("Address of letter: %p\n", &letter);  // Shows memory address
-    printf("Value at that address (via *ptr): %c\n", *ptr);  // Should show 'A'
-
-    *ptr = 'Z';  // Change value via pointer
-
-    printf("Now letter = %c\n", letter);  // Should show 'Z'
-
-    return 0;
+	i = 0;
+	while(s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
-
+/*
+int	main()
+{
+	ft_putstr_fd("42 Porto - libft", 1);
+}
+*/

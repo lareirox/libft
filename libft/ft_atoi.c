@@ -6,7 +6,7 @@
 /*   By: nugoncal <nugoncal@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:28:04 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/04/08 15:31:21 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:50:29 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
-
+/*
 #include <stdio.h>
 
 int	main(int argc, char **argv)
@@ -48,4 +48,6 @@ int	main(int argc, char **argv)
 		printf("int: %d\n", result);
 	}
 	return (0);
-}	
+}
+*/
+

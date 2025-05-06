@@ -35,13 +35,13 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 
 
 /*
-a função memcpy faz:
-Ela copia n bytes da área de memória src (source = origem) para a 
+a função memcpy:
+- copia n bytes da área de memória src (source = origem) para a 
 área de memória dest (destination = destino).
-Ela não para no '\0' (não se importa se os dados são texto ou não). 
-Ela copia exatamente o número de bytes que tu disseres.
+- não para no '\0' (não se importa se os dados são texto ou não). 
+- copia exatamente o número de bytes que tu disseres.
 
-/*  LIBRARY: <string.h>
+**  LIBRARY: "string.h"
 **  DESCRIPTION: The memcpy() function copies n bytes from memory area src 
 **  to memory area dest.  The memory areas must
 **  not overlap.  Use memmove(3) if the memory areas do overlap.

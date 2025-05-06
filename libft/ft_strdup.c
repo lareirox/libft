@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*duplicate;
 	int		len;
@@ -32,7 +32,7 @@ char	*ft_strdup(char *src)
 	duplicate[len] = '\0';
 	return (duplicate);
 }
-
+/*
 #include <stdio.h>
 
 int     main(void)
@@ -52,3 +52,4 @@ int     main(void)
 	}
 	return 0;
 }
+*/

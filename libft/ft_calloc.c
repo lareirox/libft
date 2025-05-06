@@ -16,7 +16,7 @@ void	*ft_calloc(unsigned int count, unsigned int size)
 {
 	void		*space;
 	unsigned int		total_size;
-	int			i;
+	unsigned int			i;
 	unsigned char		*ptr;
 
 	total_size = count * size;
@@ -41,8 +41,7 @@ void	*ft_calloc(unsigned int count, unsigned int size)
 **		block(size_t size). Memory allocated by calloc is initialized
 **		to zero. calloc return NULL when sufficient memory is not
 **		available in the heap.
-*/
-/*
+
  * A função calloc serve para:
 Alocar memória suficiente para armazenar count elementos, cada um com size bytes.
 Inicializar toda essa memória com zeros.

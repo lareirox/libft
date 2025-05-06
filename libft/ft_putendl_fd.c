@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nugoncal <nugoncal@student.42porto.co      +#+  +:+       +#+        */
+/*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 12:49:42 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/04/08 12:51:32 by nugoncal         ###   ########.fr       */
+/*   Created: 2025/05/06 17:32:53 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/05/06 17:52:24 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+void    ft_putstr_fd(char *s, int fd)
 {
-	int	len;
+        int     i;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
+        i = 0;
+        while(s[i])
+        {
+                write(fd, &s[i], 1);
+                i++;
+        }
+	write(fd, "\n", 1);
 }
 /*
-#include <stdio.h>
-
-int	main(int argc, char **argv)
+int     main()
 {
-	if (argc <=2)
-	{
-		int	len;
-		len = 	ft_strlen(argv[1]);
-		printf("nr caracteres = %d\n", len);
-	}
-	return (0);
-}*/
+        ft_putstr_fd("42 Porto - libft", 2);
+}
+*/

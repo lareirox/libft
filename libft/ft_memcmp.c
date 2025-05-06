@@ -30,7 +30,7 @@ int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 #include <string.h> // for original memcmp
 #include <unistd.h>
@@ -59,3 +59,4 @@ int main(void)
 
     return (0);
 }
+*/

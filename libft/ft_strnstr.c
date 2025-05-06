@@ -15,8 +15,8 @@
 
 char	*ft_strnstr(const char *str, const char *find, unsigned int len)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	if (find[i] == '\0')
