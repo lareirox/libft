@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nugoncal <nugoncal@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 17:32:53 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/07 11:25:41 by nugoncal         ###   ########.fr       */
+/*   Created: 2025/04/08 12:36:27 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/04/08 12:45:48 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+int	ft_isprint(int c)
 {
-        int     i;
-
-        i = 0;
-        while(s[i])
-        {
-                write(fd, &s[i], 1);
-                i++;
-        }
-	write(fd, "\n", 1);
+	if (!(c >= ' ' && c <= '~'))
+		return (0);
+	else
+		return (1);
 }
 /*
-int     main()
+#include <stdio.h>
+
+int	main(void)
 {
-        ft_putstr_fd("42 Porto - libft", 2);
-}
-*/
+	char	c;
+
+	c = '4';
+	int	s = ft_isprint(c);
+
+	printf("print 1\noutros 0\n: %i\n", s);
+	return (0);
+}*/

@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nugoncal <nugoncal@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 17:32:53 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/07 11:25:41 by nugoncal         ###   ########.fr       */
+/*   Created: 2025/04/08 12:49:42 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/04/08 12:51:32 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+int	ft_strlen(const char *str)
 {
-        int     i;
+	int	len;
 
-        i = 0;
-        while(s[i])
-        {
-                write(fd, &s[i], 1);
-                i++;
-        }
-	write(fd, "\n", 1);
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }
 /*
-int     main()
+#include <stdio.h>
+
+int	main(int argc, char **argv)
 {
-        ft_putstr_fd("42 Porto - libft", 2);
-}
-*/
+	if (argc <=2)
+	{
+		int	len;
+		len = 	ft_strlen(argv[1]);
+		printf("nr caracteres = %d\n", len);
+	}
+	return (0);
+}*/

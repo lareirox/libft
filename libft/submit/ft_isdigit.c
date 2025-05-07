@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nugoncal <nugoncal@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 17:32:53 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/07 11:25:41 by nugoncal         ###   ########.fr       */
+/*   Created: 2025/04/08 11:33:08 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/04/08 12:26:43 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+int	ft_isdigit(int c)
 {
-        int     i;
-
-        i = 0;
-        while(s[i])
-        {
-                write(fd, &s[i], 1);
-                i++;
-        }
-	write(fd, "\n", 1);
+	if (!(c >= '0' && c <= '9'))
+		return (0);
+	else
+		return (1);
 }
 /*
-int     main()
+#include <stdio.h>
+
+int     main(void)
 {
-        ft_putstr_fd("42 Porto - libft", 2);
-}
-*/
+        char    c;
+
+        c = '4';
+        int     s = ft_isdigit(c);
+
+        printf("numeros 1\noutros 0\n: %i\n", s);
+        return (0);
+}*/

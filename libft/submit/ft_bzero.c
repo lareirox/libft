@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 17:32:53 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/07 11:25:41 by nugoncal         ###   ########.fr       */
+/*   Created: 2025/04/12 09:08:44 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/04/12 09:28:25 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_bzero(void *s, unsigned int n)
 {
-        int     i;
+	unsigned char	*ptr = (unsigned char *)s;
 
-        i = 0;
-        while(s[i])
-        {
-                write(fd, &s[i], 1);
-                i++;
-        }
-	write(fd, "\n", 1);
+	while (n > 0)
+	{
+        	*ptr = 0;
+        	ptr++;
+        	n--;
+	}
 }
-/*
-int     main()
-{
-        ft_putstr_fd("42 Porto - libft", 2);
-}
-*/
