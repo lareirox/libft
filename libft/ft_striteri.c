@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 10:30:04 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/06 11:13:50 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 10:36:34 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_striteri(char *s, void(*f)(unsigned int, char *))
 		i++;
 	}
 }
-
+/*
 #include <unistd.h>
 
 void    ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -60,4 +60,4 @@ int main(void)
 
     return (0);
 }
-
+*/

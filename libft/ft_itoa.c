@@ -6,12 +6,11 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 10:38:41 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/04 17:53:27 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 09:57:26 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_nlen(unsigned int n)
 {
@@ -68,6 +67,7 @@ char	*ft_itoa(int n)
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdlib.h>
 
 char    *ft_itoa(int n);
 
@@ -97,6 +97,7 @@ int main(void)
 
         return (0);
 }
+
 
 /*
 int main(int argc, char *argv[])
