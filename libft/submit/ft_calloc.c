@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 10:50:24 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/02 17:21:08 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:44:07 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_calloc(unsigned int count, unsigned int size)
 {
-	void		*space;
-	unsigned int		total_size;
-	unsigned int			i;
-	unsigned char		*ptr;
+	unsigned int	total_size;
+	unsigned int	i;
+	unsigned char	*ptr;
+	void			*space;
 
 	total_size = count * size;
 	space = malloc(total_size);
@@ -32,7 +32,6 @@ void	*ft_calloc(unsigned int count, unsigned int size)
 	}
 	return (space);
 }
-
 /*
 ** LIBRARY: <stdlib.h>
 ** DESCRIPTION: calloc() function is used to dynamically allocate

@@ -22,13 +22,13 @@ SRC =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_striteri.c ft_strmapi.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-//SRCBON	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+SRCBON	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 			ft_lstmap.c
 
 OBJ =		$(SRC:.c=.o)
 
-//OBJBON	=	${SRCBON:.c=.o}
+OBJBON	=	${SRCBON:.c=.o}
 
 AR = ar -rcs
 
@@ -39,7 +39,7 @@ $(NAME): $(OBJ)
 
 all: $(NAME)
 
-//bonus: ${OBJBON}
+bonus: ${OBJBON}
 	$(AR) $(NAME) $(OBJBON)
 
 clean:
@@ -49,7 +49,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
 
 
 #	Your Makefile must at contain at least the rules $(NAME), all, clean, fclean and re.

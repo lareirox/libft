@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 10:49:27 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/07 11:23:15 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 19:05:15 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, unsigned int len)
 {
 	unsigned int	s_len;
-	char		*substr;
+	char			*substr;
 
 	if (!s)
 		return (NULL);

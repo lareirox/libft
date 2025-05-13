@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 10:30:04 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/07 10:36:34 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:54:22 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void(*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
 	if (!s || !f)
-		return;// voide ft does not return a value
+		return ;
 	i = 0;
 	while (s[i])
 	{

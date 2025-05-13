@@ -6,33 +6,33 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 19:13:54 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/08 17:57:14 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/08 16:22:58 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 long	ft_nlen(int n);
-char	*ft_char(char *str, unsigned int nb, long len);
+char		*ft_char(char *str, unsigned int nb, long len);
 
 char	*ft_itoa(int n)
 {
 	unsigned int	nb;
-	long			len;
-	char			*str;
+	long		len;
+	char		*str;
 
-	if (n == 0)
-		return (ft_strdup("0"));
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	len = ft_nlen(n);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	str[len--] = '\0';
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
-		nb = -n;
+		nb = -n,
 		str[0] = '-';
 	}
 	else
@@ -51,7 +51,7 @@ char	*ft_char( char *str, unsigned int nb, long len)
 	return (str);
 }
 
-long	ft_nlen(int n)
+long ft_nlen(int n)
 {
 	long	len;
 
@@ -65,7 +65,7 @@ long	ft_nlen(int n)
 	}
 	return (len);
 }
-/*
+
 #include <stdio.h>
 
 int	main(int argc, char *argv[])
@@ -85,4 +85,3 @@ int	main(int argc, char *argv[])
 	free(str);
 	return (0);
 }
-*/

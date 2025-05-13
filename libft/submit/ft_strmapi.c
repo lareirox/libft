@@ -6,19 +6,17 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:51:34 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/06 17:55:21 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:47:10 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdlib.h>
-//#include <stddef.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	unsigned int	len;
-	char		*strmapi;
+	char			*strmapi;
 
 	if (s == NULL || f == NULL)
 		return (NULL);
@@ -40,7 +38,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 // "Copiar e transformar com malloc → conta, aloca, percorre, termina, retorna"
 // Isto aplica-se a quase todas as funções tipo map, substr, strdup, etc.
-// "Se eu fiz malloc, sou eu que faço free. Se eu não fiz malloc, não toco no free."
+// "Se eu fiz malloc, sou eu que faço free. 
+// Se eu não fiz malloc, não toco no free."
 /*
 #include <stdio.h>
 
@@ -48,7 +47,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 char	addn(unsigned int i, char c)
 {
-	(void)i;// não vamos usar este parametro, void para avisar o compilador ano dar warning ou erro
+	(void)i;// não vamos usar este parametro, void para avisar o compilador
+77para não dar warning ou erro
 	return (c + g_n);
 }
 

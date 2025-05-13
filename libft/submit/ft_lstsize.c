@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 17:23:30 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/07 19:03:54 by nugoncal         ###   ########.fr       */
+/*   Created: 2025/05/08 19:04:38 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/05/10 16:34:20 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int	list_size;
 
-	i = 0;
-	while (s[i])
+	list_size = 0;
+	while (lst)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		lst = lst->next;
+		list_size++;
 	}
+	return (list_size);
 }
 /*
-int	main()
-{
-	ft_putstr_fd("42 Porto - libft", 1);
-}
+Parameters -- lst: The beginning of the list.
+return The length of the list
+
+Counts the number of nodes in the list.
 */

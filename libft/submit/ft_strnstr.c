@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 10:49:44 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/02 10:49:50 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:35:31 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,12 @@ char	*ft_strnstr(const char *str, const char *find, unsigned int len)
 	i = 0;
 	if (find[i] == '\0')
 		return ((char *)str);
-
 	while (str[i] && i < len)
 	{
 		j = 0;
-		if(str[i] == find[j])
+		if (str[i] == find[j])
 		{
-			while(str[i + j] == find[j] && (i + j) < len && find [j] != '\0')
+			while (str[i + j] == find[j] && (i + j) < len && find [j] != '\0')
 				j++;
 			if (!find[j])
 				return ((char *)&str[i]);
@@ -38,9 +37,8 @@ char	*ft_strnstr(const char *str, const char *find, unsigned int len)
 }
 
 /*
-A função strnstr(haystack, needle, len) procura a primeira ocorrência da needle (sub-string) dentro dos primeiros len caracteres de haystack.
+A função strnstr(haystack, needle, len) procura a primeira ocorrência da 
+needle (sub-string) dentro dos primeiros len caracteres de haystack.
 Se needle estiver vazia, retorna o próprio haystack.
 Se não encontrar nada, retorna NULL.
 */
-
-

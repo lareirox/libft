@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 10:46:35 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/02 12:38:22 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:59:57 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	wordcount(char *s, char c)
 {
 	int	wcount;
-	int	i;// inicio da palavra
+	int	i;
 
 	wcount = 0;
 	i = 0;
@@ -25,22 +25,23 @@ int	wordcount(char *s, char c)
 			wcount++;
 		i++;
 	}
-	return (wcount);// contador de palavras ou elementos
+	return (wcount);
 }
-char	*word(char *s1, char c)// copia palavra ou elemento
-{
-		char	*copy;
-		int	len;
 
-		len = 0;
-		while (s1[len] != c && s1[len] != '\0')
-			len++;
-		copy = (char *) malloc ((len + 1) * sizeof(char));
-		if (!copy)
-			return (NULL);
-		ft_memcpy(copy, s1, len);
-		copy[len] = '\0';
-		return (copy);
+char	*word(char *s1, char c)
+{
+	char	*copy;
+	int		len;
+
+	len = 0;
+	while (s1[len] != c && s1[len] != '\0')
+		len++;
+	copy = (char *) malloc ((len + 1) * sizeof(char));
+	if (!copy)
+		return (NULL);
+	ft_memcpy(copy, s1, len);
+	copy[len] = '\0';
+	return (copy);
 }
 
 void	free_all(char **word_array, int w)
@@ -56,7 +57,6 @@ void	free_all(char **word_array, int w)
 	free(word_array);
 }
 
-
 char	**array(char **word_array, char *s1, char c, int word_count)
 {
 	int	w;
@@ -69,7 +69,7 @@ char	**array(char **word_array, char *s1, char c, int word_count)
 		word_array[w] = word(s1, c);
 		if (!word_array[w])
 		{
-			free_all(word_array, w);// para evitar mem leaks, se por exemplo falhar em s2 nao perder s1
+			free_all(word_array, w);
 			return (NULL);
 		}
 		while (*s1 != c && *s1 != '\0')
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**word_array;
 	char	*s1;
-	int	word_count;
+	int		word_count;
 
 	s1 = ft_strdup(s);
 	if (!s1)
@@ -99,9 +99,6 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (word_array);
 }
-
-
-
 /*
 #include <stdio.h>
 int	main()
@@ -129,7 +126,8 @@ ft_split(NULL, ' ')
 
 /* notas
  * Exemplo:
- * ft_split("hello world test", ' ') //  Deve retornar -> ["hello", "world", "test", NULL]
+ * ft_split("hello world test", ' ') 
+ * //  Deve retornar -> ["hello", "world", "test", NULL]
 
 Temos:
     Uma string s

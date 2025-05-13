@@ -6,33 +6,29 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:46:34 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/04/16 17:54:00 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/08 16:42:48 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
-
 	unsigned int	n;
 
 	n = 0;
 	i = 0;
 	while (src[n])
 		n++;
-
 	if (size == 0)
 		return (n);
-	
 	while (i < (size - 1) && src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
-
 	return (n);
 }
 /*

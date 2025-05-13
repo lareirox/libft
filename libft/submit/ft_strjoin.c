@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 16:59:00 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/02 17:15:58 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:45:20 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ new string, which is the result of concatenating
 ’s1’ and ’s2’.
 
 Temos de:
-    Calcular o tamanho total necessário (tamanho de s1 + tamanho de s2 + 1 para o \0)
+Calcular o tamanho total necessário (tamanho de s1 + tamanho de s2 + 1 para o \0)
     Alocar memória com malloc
     Copiar s1 para o espaço novo
     Concatenar s2 logo a seguir

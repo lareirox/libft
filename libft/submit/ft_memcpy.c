@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 14:37:16 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/02 15:11:33 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/08 17:35:15 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 	unsigned char	*dest_cast;
 	unsigned char	*src_cast;
 
-	if (src == NULL || dest == NULL)
-		return (NULL);
 	if (dest == src)
 		return (dest);
 	dest_cast = (unsigned char *)dest;
@@ -32,8 +30,6 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 	}
 	return (dest);
 }
-
-
 /*
 a função memcpy:
 - copia n bytes da área de memória src (source = origem) para a 

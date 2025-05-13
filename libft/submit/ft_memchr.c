@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 17:00:17 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/02 17:14:02 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:48:34 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 	{
 		if (ptr[i] == (unsigned char) c)
 			return ((void *)&ptr[i]);
-		i++;	
+		i++;
 	}
 	return (0);
 }
@@ -116,8 +116,7 @@ função ft_memchr exige.
 
     Quando precisamos retornar um ponteiro de um tipo para outro, fazemos cast 
     para garantir que o tipo está correto.
-
-    No caso do ft_memchr, fazemos cast para void * porque queremos devolver um 
-    ponteiro genérico, embora a variável interna seja do tipo const unsigned char *.
+No caso do ft_memchr, fazemos cast para void * porque queremos devolver um 
+ponteiro genérico, embora a variável interna seja do tipo const unsigned char *.
 
 */

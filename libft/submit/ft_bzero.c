@@ -6,7 +6,7 @@
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 09:08:44 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/04/12 09:28:25 by nugoncal         ###   ########.fr       */
+/*   Updated: 2025/05/07 17:18:48 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	ft_bzero(void *s, unsigned int n)
 {
-	unsigned char	*ptr = (unsigned char *)s;
+	unsigned char	*ptr;
 
+	ptr = (unsigned char *)s;
 	while (n > 0)
 	{
-        	*ptr = 0;
-        	ptr++;
-        	n--;
+		*ptr = 0;
+		ptr++;
+		n--;
 	}
 }

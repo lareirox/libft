@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nugoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 17:23:30 by nugoncal          #+#    #+#             */
-/*   Updated: 2025/05/07 19:03:54 by nugoncal         ###   ########.fr       */
+/*   Created: 2025/05/08 19:09:42 by nugoncal          #+#    #+#             */
+/*   Updated: 2025/05/10 16:43:16 by nugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
 /*
-int	main()
-{
-	ft_putstr_fd("42 Porto - libft", 1);
-}
+* Parametros: inicio da lista (ponteiro para o primeiro nó da lista?)
+* retorno: ultimo nó da lista (lst)
 */
