@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 void	*ft_calloc(unsigned int count, unsigned int size)
 {
@@ -19,6 +20,8 @@ void	*ft_calloc(unsigned int count, unsigned int size)
 	unsigned int			i;
 	unsigned char		*ptr;
 
+	if (count > INT_MAX/size)
+		return (0);
 	total_size = count * size;
 	space = malloc(total_size);
 	if (space == NULL)
@@ -50,7 +53,27 @@ Ou seja, faz duas coisas importantes:
     Usa malloc para alocar essa memória
     Usa algo como memset (ou um loop) para preencher a memória com zeros
 
-#include <stddef.h> // ate adicioanr a minha libft.h pelo makefile
-#include <stdlib.h>
-
 */
+#include <stdlib.h>
+#include <stdio.h>
+
+int	main()
+{
+	void *ptr = ft_calloc(5, sizeof(int));
+	if (ptr)
+	{
+		for (size_t i = 0; i < 5 * sizeof(int); i++)
+		{
+			if (((unsigned char *)ptr)[i] != 0)
+			{
+				printf("FAILED");
+				free(ptr);
+				return (0);
+			}
+		}
+			printf("SUCCESS");
+	}
+	else 
+		printf("FAILED");
+	free(ptr);
+}

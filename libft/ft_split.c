@@ -100,7 +100,7 @@ char	**ft_split(char const *s, char c)
 	return (word_array);
 }
 
-
+corrigir este split, tem memory leaks!!!! ver testes paco -s
 
 /*
 #include <stdio.h>
